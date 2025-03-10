@@ -33,7 +33,7 @@ export default function Stopwatch() {
         <h1 className="text-3xl font-bold mb-4">Stopwatch</h1>
         <button
           onClick={() => setIsAnalog(!isAnalog)}
-          className="mb-4 px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white"
+          className="mb-4 px-4 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white hover:cursor-pointer"
         >
           Toggle {isAnalog ? "Digital" : "Analog"} Mode
         </button>
@@ -42,7 +42,7 @@ export default function Stopwatch() {
           <div className="relative w-40 h-40 mx-auto border-4 m-4 border-white rounded-full flex items-center justify-center">
             <div className="flex justify-center items-end">
               <div
-                className="absolute w-1 h-16 bg-red-500 origin-bottom transform"
+                className="absolute w-1 h-16 bg-transparent border-1 border-red-500 origin-bottom transform"
                 style={{
                   left: "50%",
                   transform: `translateX(-50%) rotate(${(time / 1000) * 6}deg)`,
@@ -78,7 +78,7 @@ export default function Stopwatch() {
         <div className="flex justify-center space-x-4">
           <button
             onClick={() => setIsRunning(!isRunning)}
-            className={`px-4 py-2 rounded text-white ${
+            className={`px-4 py-2 rounded text-white hover:cursor-pointer ${
               isRunning
                 ? "bg-red-500 hover:bg-red-600"
                 : "bg-green-500 hover:bg-green-600"
@@ -91,7 +91,7 @@ export default function Stopwatch() {
               setIsRunning(false);
               setTime(0);
             }}
-            className="px-4 py-2 rounded bg-yellow-500 hover:bg-yellow-600 text-white"
+            className="px-4 py-2 rounded bg-yellow-500 hover:bg-yellow-600 text-white hover:cursor-pointer"
           >
             Reset
           </button>

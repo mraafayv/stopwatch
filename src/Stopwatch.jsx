@@ -80,7 +80,7 @@ export default function Stopwatch() {
             onClick={() => setIsRunning(!isRunning)}
             className={`px-4 py-2 rounded text-white hover:cursor-pointer ${
               isRunning
-                ? "bg-red-500 hover:bg-red-600"
+                ? "bg-yellow-500 hover:bg-yellow-600 "
                 : "bg-green-500 hover:bg-green-600"
             }`}
           >
@@ -91,7 +91,7 @@ export default function Stopwatch() {
               setIsRunning(false);
               setTime(0);
             }}
-            className="px-4 py-2 rounded bg-yellow-500 hover:bg-yellow-600 text-white hover:cursor-pointer"
+            className="px-4 py-2 rounded bg-red-500 hover:bg-red-600 text-white hover:cursor-pointer"
           >
             Reset
           </button>
